@@ -1,21 +1,46 @@
+@import "mixin";
+
 body {
   background: url('background_pattern.jpg');
   li{
     list-style: none
   }
+  .logo {
+    margin-bottom: 30px;
+  }
 }
-.menuTop {
+
+.menu-top {
   position: absolute;
   top: 7px;
   ul {
-    //margin-top: 10px
     li {
       padding: 8px 10px 5px 10px;
       background: #f1f1f1;
       float: left;
       margin-right: 10px;
-      border: 1px solid #e1e1e1;
-      border-radius: 3px
+      border: 2px solid #e1e1e1;
+      @include rounded(3px);
+      @include shadow(0 1px 1px 1px #ccc);
+      a {
+        color: #596a6c;
+        display: block;
+        &:hover{
+          text-decoration: none
+        }
+      }
+      &:hover {
+        padding: 10px 10px 5px 10px;
+      }
     }
+  }
+}
+
+form {
+  input[type=text]{
+    font-style: italic;
+  }
+  input[type=placeholder]{
+    color: red!important;
   }
 }

@@ -20,13 +20,18 @@
     </div>
   </div>
   <div class="container">
-    <div class="menuTop">
+    <div class="menu-top">
       <ul>
         <li><%= link_to 'Sign up', user_omniauth_authorize_path(:facebook) %></li>
         <li><%= link_to 'Sign in', user_omniauth_authorize_path(:facebook) %></li>
       </ul>
     </div>
-    <%= yield %>
+    <div class="logo span10">
+      <%= link_to(image_tag("logo.png"), root_path, :class => "pull-right") %>
+    </div>
+    <div>
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>
