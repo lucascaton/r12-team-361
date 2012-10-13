@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   has_many :videos
 
   def self.find_for_facebook(auth)
-    where(provider: auth.provider).where(facebook_uid: auth.uid) || User.new
+    where(provider: auth.provider).where(facebook_uid: auth.uid).first || User.new
   end
 end
