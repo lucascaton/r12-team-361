@@ -1,0 +1,21 @@
+body {
+  background: url('background_pattern.jpg');
+  li{
+    list-style: none
+  }
+}
+.menuTop {
+  position: absolute;
+  top: 7px;
+  ul {
+    //margin-top: 10px
+    li {
+      padding: 8px 10px 5px 10px;
+      background: #f1f1f1;
+      float: left;
+      margin-right: 10px;
+      border: 1px solid #e1e1e1;
+      border-radius: 3px
+    }
+  }
+}

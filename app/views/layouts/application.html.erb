@@ -5,9 +5,28 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
 </head>
 <body>
-  <%= link_to 'Signup', user_omniauth_authorize_path(:facebook) %>
-  <%= yield %>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="menuTop">
+      <ul>
+        <li><%= link_to 'Sign up', user_omniauth_authorize_path(:facebook) %></li>
+        <li><%= link_to 'Sign in', user_omniauth_authorize_path(:facebook) %></li>
+      </ul>
+    </div>
+    <%= yield %>
+  </div>
 </body>
 </html>
