@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
+gem 'capistrano'
+gem 'devise'
 gem 'jquery-rails'
 gem 'mysql2'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'rails', '3.2.8'
 gem 'simple_form'
-gem 'capistrano'
+
 
 group :production do
   gem 'therubyracer'
