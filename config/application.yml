@@ -1,9 +1,16 @@
-development:
+defaults: &defaults
   facebook:
     app_id: "369290979823564"
     app_secret: "f4775cd604e526b0703fdeaea043cafa"
 
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
 production:
+  <<: *defaults
   facebook:
     app_id: "369290979823564"
     app_secret: "f4775cd604e526b0703fdeaea043cafa"
