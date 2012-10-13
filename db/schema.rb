@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013160346) do
+ActiveRecord::Schema.define(:version => 20121013182231) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20121013160346) do
     t.boolean  "sponsored"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "youtube_id"
   end
 
 end
