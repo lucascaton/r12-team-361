@@ -1,0 +1,2 @@
+class VideoPresenter < Presenter
+end
