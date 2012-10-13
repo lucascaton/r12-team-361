@@ -51,6 +51,7 @@ form {
 .video-content,.sponsored{
   position: relative;
   display: block;
+  height: 126px;
   padding: 20px 53px 20px 20px;
   margin: 0 0 20px 0;
   @include rounded(3px);
@@ -111,7 +112,10 @@ form {
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
       background: #614d5d;
     }
-
+  }
+  .video-frame {
+    clear: both;
+    margin-top: 30px;
   }
 }
 
