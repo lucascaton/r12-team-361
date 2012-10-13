@@ -13,6 +13,19 @@ module Babycasts
 
     def save
       return true if @user.persisted?
+
+      @user.tap do |user|
+        user.facebook_uid   = @facebook_uid
+        user.facebook_token = @facebook_token
+        user.provider       = @auth_hash.provider
+        user.email          = info['email']
+        user.first_name     = info['first_name']
+        user.last_name      = info['last_name']
+        user.nickname       = info['nickname']
+        user.password       = Devise.friendly_token[0, 20]
+      end
+
+      return @user.save
     end
   end
 end

@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
 
   has_many :votes
   has_many :videos
+
+  def self.find_for_facebook(auth)
+    where(provider: auth.provider).where(facebook_uid: auth.uid) || User.new
+  end
 end

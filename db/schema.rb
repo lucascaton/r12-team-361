@@ -33,9 +33,11 @@ ActiveRecord::Schema.define(:version => 20121013182231) do
     t.date     "birthdate"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "facebook_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["facebook_token"], :name => "index_users_on_facebook_token"
   add_index "users", ["facebook_uid"], :name => "index_users_on_facebook_uid"
   add_index "users", ["provider"], :name => "index_users_on_provider"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true

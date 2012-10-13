@@ -1,4 +1,4 @@
-require 'unit_test'
+require 'spec_helper'
 
 module Babycasts
   describe UserAuthentication do
@@ -6,6 +6,7 @@ module Babycasts
       stub('Access Token',
            :credentials => mock(:token => 'ZZaFP3kGrz8'),
            :uid => '200000305385990',
+           :provider => "facebook",
            :extra => {'raw_info' => {'birthday' => '12/20/1981'}},
            :info => {
             'email'      => 'john@example.com',
@@ -41,6 +42,41 @@ module Babycasts
         subject { UserAuthentication.new(access_token, user: user) }
 
         its(:save) { should be true }
+      end
+
+      context "when user isn't persisted" do
+        let(:user) { User.new }
+        subject { UserAuthentication.new(access_token, user: user) }
+        before { subject.save }
+
+        it "should persisted the user without errors" do
+          user.errors.should eql([])
+          user.should be_persisted
+        end
+
+        it "should save the provider" do
+          user.provider.should == "facebook"
+        end
+
+        it "should save the first name" do
+          user.first_name.should == "John"
+        end
+
+        it "should save the last name" do
+          user.last_name.should == "Smith"
+        end
+
+        it "should save the nickname" do
+          user.nickname.should == "john_smith"
+        end
+
+        it "should save the facebook token" do
+          user.facebook_token.should == "ZZaFP3kGrz8"
+        end
+
+        it "should save the facebook uid" do
+          user.facebook_uid.should == "200000305385990"
+        end
       end
     end
   end
