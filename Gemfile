@@ -4,6 +4,11 @@ gem 'jquery-rails'
 gem 'mysql2'
 gem 'rails', '3.2.8'
 gem 'simple_form'
+gem 'capistrano'
+
+group :production do
+  gem 'therubyracer'
+end
 
 group :development do
   gem 'thin'
