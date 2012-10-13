@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'pg'
+gem 'mysql2'
 gem 'rails', '3.2.8'
 
 group :development do
