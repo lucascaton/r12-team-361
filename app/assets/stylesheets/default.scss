@@ -75,6 +75,11 @@ form {
   margin: 0 0 20px 0;
   @include rounded(3px);
   @include shadow(inset 1px 1px 0 0 #ccc);
+  .close-video {
+    display: none;
+    position: absolute;
+    right: 10px;
+  }
   .popover {
     left: 211px;
     top: -17px;
@@ -101,6 +106,7 @@ form {
     @include shadow(2px 2px 1px 0 #ccc);
     margin-right: 0
   }
+  .alternative-do-play,
   .link-to-play {
     position: absolute;
     padding: 40px 58px;
