@@ -9,6 +9,7 @@ gem 'omniauth-facebook'
 gem 'rails', '3.2.8'
 gem 'simple_form'
 gem 'settingslogic'
+gem 'kaminari'
 
 group :production do
   gem 'therubyracer'

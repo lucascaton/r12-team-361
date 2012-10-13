@@ -1,0 +1,12 @@
+<div class="video-content span9 <%= (video.sponsored) ? 'sponsored' : '' %>">
+  <%= image_tag("http://youthfrenzy.com/wp-content/uploads/2012/03/dowoad-161x120.jpg") %>
+    <div class="span6">
+      <h2><%= video.title %></h2>
+      <p>
+        <%= video.description %>
+      </p>
+      <%= link_to("Vote", '', :class => "btn btn-system-default")%>
+      <%= link_to("Share", '', :class => "btn btn-system-default")%>
+      <%= "<span>sponsored</span>".html_safe if video.sponsored %>
+    </div>
+  </div>
