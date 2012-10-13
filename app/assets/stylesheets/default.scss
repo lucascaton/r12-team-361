@@ -72,6 +72,7 @@ form {
       margin-top: -15px
     }
   }
+
   span {
     position: absolute;
     bottom: 10px;
@@ -116,7 +117,9 @@ form {
 
 footer {
   background: url('footer_backgorund_pattern.jpg');
-  height: 60px;
+  height: 80px;
+  position: relative;
+  bottom: -50px;
   div {
     width: 775px;
     margin: 0 auto;
