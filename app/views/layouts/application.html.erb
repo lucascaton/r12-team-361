@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= link_to "Sign Up", sign_up_path %>
+  <%= link_to 'Signup', user_omniauth_authorize_path(:facebook) %>
   <%= yield %>
 </body>
 </html>
