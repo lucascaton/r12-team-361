@@ -1,5 +1,5 @@
 class Video < ActiveRecord::Base
-  YOUTUBE_REGEX = /(?:https?:\/\/)?(?:www\.)?youtu(?:\.be|be\.com)\/(?:watch\?v=)?(\w{10,})(\S*)/
+  YOUTUBE_REGEX = /(?:https?:\/\/)?(?:www\.)?youtu(?:\.be|be\.com)\/(?:watch\?v=)?([-_a-zA-Z0-9]{10,})\S*/
 
   attr_accessible :title, :description, :youtube_url, :sponsored, :youtube_id, :user
 
