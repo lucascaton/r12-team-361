@@ -3,10 +3,11 @@ window.babyCasts = window.babyCasts or {}
 window.babyCasts.main =
   init: ->
     babyCasts.main.clickToShowVideo()
+    $('.btn-danger').popover()
     $('.disabled').tooltip()
 
   clickToShowVideo: ->
-    $(".video-content img").click ->
+    $(".link-to-play").click ->
       videoId = $(@).parent().data("video_id");
       $(@).parent().animate({
         height: '590px'
@@ -14,7 +15,6 @@ window.babyCasts.main =
         $("##{videoId}").html(
           "<iframe width='695' height='415' src='http://www.youtube.com/embed/#{videoId}' frameborder='0' allowfullscreen></iframe>"
         )
-
       );
 
 $(document).ready ->

@@ -1,5 +1,6 @@
-<div class="video-content span9 <%= (video.sponsored) ? 'sponsored' : '' %>" data-video_id="R4uZCV-xRwg">
-  <%= image_tag("http://youthfrenzy.com/wp-content/uploads/2012/03/dowoad-161x120.jpg") %>
+<div class="video-content span9 <%= (video.sponsored) ? 'sponsored' : '' %>" data-video_id="<%= video.youtube_id %>">
+  <%= image_tag("http://cdn1.iconfinder.com/data/icons/socialmediaicons_v120/48/youtube.png", :class => "link-to-play") %>
+  <%= image_tag("http://youthfrenzy.com/wp-content/uploads/2012/03/dowoad-161x120.jpg", :class => "image-preview") %>
   <div class="span6">
     <h2><%= video.title %></h2>
     <p>
@@ -7,7 +8,8 @@
     </p>
     <%= link_to("Vote", '', :class => "btn btn-system-default")%>
     <%= link_to("Share", '', :class => "btn btn-system-default")%>
+    <a href="#" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Teste</a>
     <%= "<span>sponsored</span>".html_safe if video.sponsored %>
   </div>
-  <div class="video-frame span8" id="R4uZCV-xRwg"></div>
+  <div class="video-frame span8" id="<%= video.youtube_id %>"></div>
 </div>
