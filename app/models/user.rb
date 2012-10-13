@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
                   :provider, :facebook_uid
 
   has_many :votes
+  has_many :videos
 end
