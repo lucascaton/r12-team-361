@@ -3,7 +3,9 @@ class Video < ActiveRecord::Base
 
   attr_accessible :title, :description, :youtube_url, :sponsored, :youtube_id, :user
 
-  validates :title, :description, :youtube_url, presence: true
+  validates :youtube_url, presence: true
+  validates :title, length: { in: 3..40 }
+  validates :description, length: { in: 3..140 }
 
   validate :check_youtube_url
 
