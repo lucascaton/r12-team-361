@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'jquery-rails'
 gem 'mysql2'
 gem 'rails', '3.2.8'
+gem 'simple_form'
 
 group :development do
   gem 'thin'
@@ -19,6 +20,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'forgery'
   gem 'poltergeist'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'simplecov', :require => false
 end
