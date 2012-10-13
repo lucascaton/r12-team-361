@@ -26,12 +26,17 @@
         <li><%= link_to 'Sign in', user_omniauth_authorize_path(:facebook) %></li>
       </ul>
     </div>
-    <div class="logo span10">
+    <div class="logo span8">
       <%= link_to(image_tag("logo.png"), root_path, :class => "pull-right") %>
     </div>
     <div>
       <%= yield %>
     </div>
+    <footer class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="container">
+        <div><p class="span5">Copyright 2012 Gangmam Style team - <%= link_to("#RailsRumble2012", 'https://twitter.com/search?q=railsrumble2012&src=typd', :target => "black")%></p></div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

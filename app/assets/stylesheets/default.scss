@@ -41,11 +41,10 @@ body {
 }
 
 form {
-  input[type=text]{
+  input::-webkit-input-placeholder,
+  input:-moz-placeholder,
+  input:-ms-input-placeholder {
     font-style: italic;
-  }
-  input[type=placeholder]{
-    color: red!important;
   }
 }
 
@@ -85,8 +84,49 @@ form {
 .video-content {
   background: #dbedef;
   color: #596a6d;
+  .btn-system-default{
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background: #596a6c;
+  }
+
+  .btn-system-default:hover {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background: #596a6c;
+  }
+
   &.sponsored {
     background: #f2dcee;
     color: #6f596b;
+    .btn-system-default{
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+      background: #6f596b;
+    }
+
+    .btn-system-default:hover {
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+      background: #614d5d;
+    }
+
+  }
+}
+
+footer {
+  background: url('footer_backgorund_pattern.jpg');
+  height: 60px;
+  div {
+    width: 775px;
+    margin: 0 auto;
+    p{
+      background: #fff;
+      @include rounded(3px);
+      @include shadow(inset 1px 1px 0 0 #ccc);
+      width: 375px;
+      margin: 20px 0;
+      padding: 5px
+    }
   }
 }
