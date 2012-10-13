@@ -38,8 +38,8 @@ LINODE_SERVER_HOSTNAME = '173.255.200.235'
 
 set :bundle_flags,               "--deployment"
 
-set :application,                "railsrumble"
-set :deploy_to,                  "/var/www/apps/railsrumble"
+set :application,                "babycasts"
+set :deploy_to,                  "/var/www/apps/babycasts"
 set :normalize_asset_timestamps, false
 set :rails_env,                  "production"
 
