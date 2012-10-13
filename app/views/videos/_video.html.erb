@@ -6,9 +6,20 @@
     <p>
       <%= video.description %>
     </p>
-    <%= link_to("Vote", '', :class => "btn btn-system-default")%>
-    <%= link_to("Share", '', :class => "btn btn-system-default")%>
-    <a href="#" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Teste</a>
+    <%= link_to("Vote", '', :class => "btn btn-system-default disabled", :rel => "tooltip", :"data-placement" => "top", :"data-original-title" => 'You must be logged in order to upload.')%>
+    <div class="popover top <%= video.youtube_id %>">
+      <div class="arrow"></div>
+      <h3 class="popover-title">Share</h3>
+      <div class="popover-content">
+        <p>
+          <%= link_to(image_tag('http://cdn4.iconfinder.com/data/icons/social_balloons/48px/social_balloon-14.png'), '')%>
+          <%= link_to(image_tag('http://cdn4.iconfinder.com/data/icons/social_balloons/48px/social_balloon-05.png'), '')%>
+          <%= link_to(image_tag('http://cdn1.iconfinder.com/data/icons/social_balloons/48px/social_balloon-19.png'), '')%>
+        </p>
+        <div class="popover-footer"></div>
+      </div>
+    </div>
+    <%= link_to("Share", '', :class => "btn btn-system-default popover-click")%>
     <%= "<span>sponsored</span>".html_safe if video.sponsored %>
   </div>
   <div class="video-frame span8" id="<%= video.youtube_id %>"></div>

@@ -11,6 +11,6 @@
     </div>
   </form>
   <% @videos.each do |video| %>
-    <%= render 'video', :video => video %>
+    <%= render video %>
   <% end %>
 </div><%#= link_to_next_page @videos, 'Next' %>

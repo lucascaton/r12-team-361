@@ -75,6 +75,22 @@ form {
   margin: 0 0 20px 0;
   @include rounded(3px);
   @include shadow(inset 1px 1px 0 0 #ccc);
+  .popover {
+    left: 211px;
+    top: -17px;
+    width: 180px;
+    p {
+      margin-top: 12px;
+    }
+    .popover-footer{
+      background: transparent;
+      width: 180px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      top: 115px;
+    }
+  }
   h2 {
     font-size: 16px;
   }
