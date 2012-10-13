@@ -1,6 +1,8 @@
 class VideosController < ApplicationController
   def index
-    @videos = Video.all
+    videos_not_sponsored = Video.where(:sponsored => false).page(params[:page]).per(4)
+    videos_sponsored     = Video.where(:sponsored => true).page(params[:page]).per(1)
+    @videos              = videos_not_sponsored.unshift videos_sponsored.first
   end
 
   def new

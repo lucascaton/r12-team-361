@@ -48,6 +48,15 @@ ActiveRecord::Schema.define(:version => 20121013182231) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "youtube_id"
+    t.integer  "user_id"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "video_id"
+    t.boolean  "like"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

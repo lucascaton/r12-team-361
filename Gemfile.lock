@@ -93,6 +93,9 @@ GEM
     json (1.7.5)
     jwt (0.1.5)
       multi_json (>= 1.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     libv8 (3.3.10.4)
     libwebsocket (0.1.5)
       addressable
@@ -235,6 +238,7 @@ DEPENDENCIES
   factory_girl_rails
   forgery
   jquery-rails
+  kaminari
   mysql2
   omniauth
   omniauth-facebook
