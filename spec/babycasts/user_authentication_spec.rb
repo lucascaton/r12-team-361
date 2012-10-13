@@ -50,32 +50,32 @@ module Babycasts
         before { subject.save }
 
         it "should persisted the user without errors" do
-          user.errors.should eql([])
-          user.should be_persisted
+          expect(user.errors).to be_empty
+          expect(user).to be_persisted
         end
 
         it "should save the provider" do
-          user.provider.should == "facebook"
+          expect(user.provider).to eq("facebook")
         end
 
         it "should save the first name" do
-          user.first_name.should == "John"
+          expect(user.first_name).to eq("John")
         end
 
         it "should save the last name" do
-          user.last_name.should == "Smith"
+          expect(user.last_name).to eq("Smith")
         end
 
         it "should save the nickname" do
-          user.nickname.should == "john_smith"
+          expect(user.nickname).to eq("john_smith")
         end
 
         it "should save the facebook token" do
-          user.facebook_token.should == "ZZaFP3kGrz8"
+          expect(user.facebook_token).to eq("ZZaFP3kGrz8")
         end
 
         it "should save the facebook uid" do
-          user.facebook_uid.should == "200000305385990"
+          expect(user.facebook_uid).to eq("200000305385990")
         end
       end
     end
