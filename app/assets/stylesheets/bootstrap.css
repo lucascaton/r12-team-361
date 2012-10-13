@@ -3200,6 +3200,19 @@ input[type="button"].btn-block {
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
 
+.btn-system-default{
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background: #6f596b;
+}
+
+.btn-system-default:hover {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background: #614d5d;
+}
+
+
 .btn-upload {
   color: #73576e;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);

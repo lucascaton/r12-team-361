@@ -8,6 +8,10 @@ body {
   .logo {
     margin-bottom: 30px;
   }
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
 }
 
 .menu-top {
@@ -42,5 +46,47 @@ form {
   }
   input[type=placeholder]{
     color: red!important;
+  }
+}
+
+.video-content,.sponsored{
+  position: relative;
+  display: block;
+  padding: 20px 53px 20px 20px;
+  margin: 0 0 20px 0;
+  @include rounded(3px);
+  @include shadow(inset 1px 1px 0 0 #ccc);
+  h2 {
+    font-size: 16px;
+  }
+  img {
+    float: left;
+    @include rounded(3px);
+    border: 3px solid white;
+    @include shadow(2px 2px 1px 0 #ccc);
+    margin-right: 0
+  }
+  div {
+    margin-top: -15px;
+    float: left;
+    p {
+      margin-top: -15px
+    }
+  }
+  span {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #a99aa6;
+    font-size: 16px;
+  }
+}
+
+.video-content {
+  background: #dbedef;
+  color: #596a6d;
+  &.sponsored {
+    background: #f2dcee;
+    color: #6f596b;
   }
 }
