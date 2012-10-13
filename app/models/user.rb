@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :remember_me,
                   :provider, :facebook_uid
+
+  has_many :votes
 end
