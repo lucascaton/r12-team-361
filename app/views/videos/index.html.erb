@@ -3,11 +3,7 @@
     <div class="input-append">
       <input class="span8" id="appendedInputButtons" placeholder="Buscar" size="16" type="search">
       <button class="btn" type="button">Search</button>
-      <button class="btn btn-upload disabled" rel="tooltip" data-placement="top" data-original-title="You must be logged in order to upload." type="button">Upload</button>
-      <!--
-        If user has logged, remove this items, class => disabled and
-        this attributes => rel="tooltip" data-placement="top" data-original-title="You must be logged in to upload."
-      -->
+      <button class="btn btn-upload <%= 'disabled' unless user_signed_in? %>" rel="tooltip" data-placement="top" data-original-title="You must be logged in order to upload." type="button">Upload</button>
     </div>
   </form>
   <% @videos.each do |video| %>

@@ -9,7 +9,7 @@
     <p>
       <%= video.description %>
     </p>
-    <%= link_to("Vote", '', :class => "btn btn-system-default disabled", :rel => "tooltip", :"data-placement" => "top", :"data-original-title" => 'You must be logged in order to upload.')%>
+    <%= link_to("Vote", '', :class => "btn btn-system-default #{'disabled' unless user_signed_in?}", :rel => "tooltip", :"data-placement" => "top", :"data-original-title" => 'You must be logged in order to upload.')%>
     <div class="popover top <%= video.youtube_id %>">
       <div class="arrow"></div>
       <h3 class="popover-title">Share</h3>

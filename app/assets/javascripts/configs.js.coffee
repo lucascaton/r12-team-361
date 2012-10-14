@@ -8,6 +8,8 @@ window.babyCasts.main =
     obj.clickToCloseVideo()
 
     $('.disabled').tooltip()
+    $('.btn-upload').click ->
+      $(@).modal()
 
   hoverToShare: ->
     $(".popover-click, .popover").hover ->
