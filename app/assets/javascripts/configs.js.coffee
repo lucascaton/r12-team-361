@@ -15,6 +15,12 @@ window.babyCasts.main =
       url = ($ @).attr('href')
       ($ target).load(url)
 
+    $(".video-content").hover ->
+      $(".video-content").css("opacity", "0.5")
+      $(this).css("opacity", "1.0")
+    , ->
+      $(".video-content").css("opacity", "1.0")
+
     $(".share a").click (event) ->
       width = 575
       height = 400
