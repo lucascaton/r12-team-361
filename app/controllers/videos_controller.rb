@@ -13,7 +13,8 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.find params[:id]
+    @video_search = Babycasts::VideoSearch.new
+    @video        = Video.find params[:id]
   end
 
   protected
