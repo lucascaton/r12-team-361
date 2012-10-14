@@ -1,8 +1,8 @@
 class VideosController < ApplicationController
-  before_filter :assign_user, :assign_video, only: [:index, :results, :show]
+  respond_to :html
+  before_filter :assign_user, :assign_video, :assign_video_search
 
   def index
-    @video_search = Babycasts::VideoSearch.new
     @videos       = VideoPresenter.collect(Video.all)
   end
 
@@ -13,7 +13,6 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video_search = Babycasts::VideoSearch.new
     @video        = Video.find params[:id]
   end
 
@@ -31,5 +30,9 @@ class VideosController < ApplicationController
 
   def assign_video
     @video = Video.new
+  end
+
+  def assign_video_search
+    @video_search = Babycasts::VideoSearch.new
   end
 end
