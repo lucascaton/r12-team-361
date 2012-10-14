@@ -12,6 +12,11 @@ class BabycastsOmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  def failure
+    Rails.logger.info("Facebook integration failed. Reasons: #{params}")
+    redirect_to root_path
+  end
+
   private
 
   def auth_hash
