@@ -3,3 +3,11 @@
 http://babycasts.r12.railsrumble.com/
 
 http://railsrumble.com/
+
+== TODO list
+
+Search feature
+Change subtitle text
+Share feature (facebook and twitter)
+Fix footer text
+Fix pagination (sponsored videos should come first)
