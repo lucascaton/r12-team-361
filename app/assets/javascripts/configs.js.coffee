@@ -15,7 +15,7 @@ window.babyCasts.main =
       url = ($ @).attr('href')
       ($ target).load(url)
 
-    $(".popover a").click (event) ->
+    $(".share a").click (event) ->
       width = 575
       height = 400
       left = ($(window).width() - width) / 2
