@@ -2,6 +2,8 @@
 
 body {
   background: url('background_pattern.jpg');
+  padding-top: 60px;
+  padding-bottom: 40px;
   li{
     list-style: none
   }
@@ -9,7 +11,7 @@ body {
     margin-bottom: 30px;
   }
   .container {
-    width: 768px;
+    max-width: 768px;
     margin: 0 auto;
   }
 }
@@ -77,17 +79,12 @@ form {
   button {
     height:50px;
   }
-  input::-webkit-input-placeholder,
-  input:-moz-placeholder,
-  input:-ms-input-placeholder {
-    font-style: italic;
-  }
 }
 
 .video-content,.sponsored{
   position: relative;
   display: block;
-  height: 126px;
+  min-height: 126px;
   padding: 20px 53px 20px 20px;
   margin: 0 0 20px 0;
   @include rounded(3px);
@@ -98,8 +95,8 @@ form {
     right: 10px;
   }
   .popover {
-    left: 211px;
-    top: -17px;
+    left: 220px;
+    top: 4px;
     width: 180px;
     p {
       margin-top: 12px;

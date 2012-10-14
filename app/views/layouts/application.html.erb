@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>BabyCasts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= favicon_link_tag %>
@@ -10,8 +11,6 @@
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-      <div class="container">
-      </div>
     </div>
   </div>
   <div class="container">
@@ -30,10 +29,10 @@
         <% end %>
       </ul>
     </div>
-    <div class="logo span8">
+    <div class="logo span7">
       <%= link_to(image_tag("logo.png"), root_path, :class => "pull-right") %>
     </div>
-    <div>
+    <div class="row">
       <%= yield %>
     </div>
 
