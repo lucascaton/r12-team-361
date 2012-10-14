@@ -1,0 +1,7 @@
+<form>
+  <div class="input-append">
+    <input class="span8" id="appendedInputButtons" placeholder="Buscar" size="16" type="search">
+    <button class="btn" type="button">Search</button>
+    <button data-toggle="modal" data-target="#newVideo" class="btn btn-upload <%= 'disabled' unless user_signed_in? %>" rel="tooltip" data-placement="top" data-original-title="You must be logged in order to upload." type="button">Upload</button>
+  </div>
+</form>
