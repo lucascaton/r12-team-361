@@ -12,7 +12,7 @@ namespace :db do
         youtube_url: 'http://www.youtube.com/watch?v=-RnxD-KRkw8', sponsored: false }
     ]
 
-    videos.each { |video| Video.find_or_create_by_youtube_url(video) }
+    10.times { videos.each { |video| Video.find_or_create_by_youtube_url(video) } }
 
     puts 'Bootstrap completed.\n'
   end

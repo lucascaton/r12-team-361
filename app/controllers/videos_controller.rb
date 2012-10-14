@@ -9,7 +9,7 @@ class VideosController < ApplicationController
 
   def results
     @video_search = Babycasts::VideoSearch.new(params[:babycasts_video_search])
-    @videos = VideoPresenter.collect(@video_search.results)
+    @videos       = VideoPresenter.collect(@video_search.results)
     render :index
   end
 
