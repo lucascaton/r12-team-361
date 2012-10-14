@@ -1,5 +1,6 @@
 class VideosController < ApplicationController
   def index
+    @user   = UserPresenter.new(current_user)
     @videos = VideoPresenter.collect(Video.all)
   end
 
