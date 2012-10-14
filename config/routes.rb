@@ -1,4 +1,6 @@
 BabyCasts::Application.routes.draw do
+  root to: 'videos#index'
+
   devise_for :users, :controllers => { omniauth_callbacks: 'babycasts_omniauth_callbacks' }
 
   resources :videos, only: [:index, :show, :create] do
@@ -7,5 +9,5 @@ BabyCasts::Application.routes.draw do
     end
   end
 
-  root to: 'videos#index'
+  get '/about' => 'pages#about'
 end
