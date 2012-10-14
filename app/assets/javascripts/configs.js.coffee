@@ -37,10 +37,10 @@ window.babyCasts.main =
       $(".link-to-play").hide();
       $(@).parent().find(".close-video").show()
       $(@).parent().animate({
-        height: '590px'
+        height: '630px'
       }, 500, ->
         $("##{videoId}").html(
-          "<iframe class='iframe' width='695' height='415' src='http://www.youtube.com/embed/#{videoId}?autoplay=1' frameborder='0' allowfullscreen></iframe>"
+          "<iframe class='iframe' width='845' height='450' src='http://www.youtube.com/embed/#{videoId}?autoplay=1' frameborder='0' allowfullscreen></iframe>"
         )
       )
 
