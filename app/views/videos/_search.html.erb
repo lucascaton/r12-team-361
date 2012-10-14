@@ -1,4 +1,4 @@
-<%= simple_form_for(@video_search, url: results_videos_path) do |f| %>
+<%= simple_form_for(@video_search, url: results_videos_path, wrapper: :default) do |f| %>
   <%= f.input :expected_search, autofocus: true, label: false, placeholder: "Search", input_html: { class: "span8", size: "16", type: "search" } %>
 
   <%= f.submit "Search", class: "btn" %>
