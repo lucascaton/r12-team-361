@@ -17,7 +17,17 @@
   <div class="container">
     <div class="menu-top">
       <ul>
-        <li><%= link_to 'Sign in with facebook', user_omniauth_authorize_path(:facebook) %></li>
+        <% if user_signed_in? %>
+          <li class="user-logged">
+            <%= image_tag("https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc6/273723_100000185745732_1314174248_q.jpg")%>
+            <strong>Flavio Muniz</strong>
+            <%= link_to('') do %>
+              <i class="icon-white icon-off"></i> Log out
+            <% end %>
+          </li>
+        <% else %>
+          <li><%= link_to 'Sign in with facebook', user_omniauth_authorize_path(:facebook) %></li>
+        <% end %>
       </ul>
     </div>
     <div class="logo span8">

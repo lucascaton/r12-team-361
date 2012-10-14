@@ -6,10 +6,24 @@ window.babyCasts.main =
     obj.clickToShowVideo()
     obj.hoverToShare()
     obj.clickToCloseVideo()
+    obj.limitChar();
+    obj.limitChar(".videoTitle", "35");
+    obj.limitChar(".videoDescription", "140");
 
     $('.disabled').tooltip()
-    $('.btn-upload').click ->
-      $(@).modal()
+    ($ "a[data-toggle=modal]").click ->
+      target = ($ @).attr('data-target')
+      url = ($ @).attr('href')
+      ($ target).load(url)
+
+
+  limitChar: (element, limit) ->
+    characterlimit = limit
+    $(element).after("<sup></sup>").next().hide().end().keypress (e) ->
+      current = $(this).val().length
+      e.preventDefault()  if e.which isnt 0 and e.which isnt 8  if current >= characterlimit
+      $(this).next().show().text characterlimit - current
+
 
   hoverToShare: ->
     $(".popover-click, .popover").hover ->

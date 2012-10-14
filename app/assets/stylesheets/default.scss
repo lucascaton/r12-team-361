@@ -22,7 +22,6 @@ body {
       padding: 8px 10px 5px 10px;
       float: left;
       margin-right: 10px;
-      opacity: 0.7;
       background-color: #3B5998;
       background-repeat: repeat-x;
       background-image: -khtml-gradient(linear, left top, left bottom, from(#627AAD), to(#3B5998));
@@ -37,6 +36,22 @@ body {
       border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
       @include rounded(3px);
       @include shadow(0 1px 1px 1px #ccc);
+      &.user-logged {
+        min-width: 150px;
+        //background: rgba(211, 211, 211, .8);
+        img {
+          float: left;
+          margin-right: 10px
+        }
+        strong{
+          color: #fff;
+          font-weight: normal;
+          display: block;
+        }
+        &:hover{
+          padding: 8px 10px 5px 10px;
+        }
+      }
       a {
         color: #fff;
         display: block;
@@ -46,7 +61,6 @@ body {
       }
       &:hover {
         padding: 12px 10px 5px 10px;
-        opacity: 1.0;
       }
     }
   }
