@@ -4345,7 +4345,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-fixed-top {
-  top: 40px;
+  top: 0;
 }
 
 /*.navbar-fixed-top .navbar-inner,
