@@ -15,6 +15,9 @@ class Video < ActiveRecord::Base
 
   belongs_to :user
 
+  scope :available, where(sponsored: false).order('created_at DESC')
+  scope :sponsored, where(sponsored: true)
+
   private
 
   def check_youtube_url

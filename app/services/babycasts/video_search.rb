@@ -15,9 +15,9 @@ module Babycasts
 
     def results
       if expected_search.present?
-        Video.where(Video.arel_table[:title].matches("%#{expected_search}%"))
+        Video.available.where(Video.arel_table[:title].matches("%#{expected_search}%"))
       else
-        Video.all
+        Video.available
       end
     end
 
