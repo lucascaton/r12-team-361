@@ -19,6 +19,7 @@ body {
 .menu-top {
   position: absolute;
   top: 7px;
+  margin-left:-25px;
   ul {
     li {
       padding: 8px 10px 5px 10px;
@@ -83,6 +84,7 @@ form {
   }
   button {
     height:50px;
+    padding: 4px 20px!important;
   }
 }
 
