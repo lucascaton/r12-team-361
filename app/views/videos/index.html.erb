@@ -1,2 +1,5 @@
 <%= render @videos %>
-<%= @user.new_video_modal_partial %>
+
+<% if user_signed_in? %>
+  <%= render "videos/new" %>
+<% end %>

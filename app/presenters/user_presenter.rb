@@ -1,10 +1,4 @@
 class UserPresenter < Presenter
-  def new_video_modal_partial
-    if user_signed_in?
-      render "videos/new"
-    end
-  end
-
   def display_information
     if user_signed_in?
       render "users/info", user: self
