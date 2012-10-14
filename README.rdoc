@@ -6,5 +6,4 @@ http://railsrumble.com/
 
 == TODO list
 
-Change subtitle text
 Share feature (facebook and twitter)
