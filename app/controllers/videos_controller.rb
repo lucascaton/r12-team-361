@@ -1,9 +1,9 @@
 class VideosController < ApplicationController
-  respond_to :html
+  respond_to :html, :js
   before_filter :assign_user, :assign_video, :assign_video_search
 
   def index
-    @videos       = VideoPresenter.collect(Video.all)
+    @videos = VideoPresenter.collect(Video.all)
   end
 
   def results
@@ -13,7 +13,7 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video        = Video.find params[:id]
+    @video = Video.find params[:id]
   end
 
   def create

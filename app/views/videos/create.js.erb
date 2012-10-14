@@ -1,0 +1,6 @@
+<% if @video.persisted? %>
+  $(".notice .alert-success").html("<%= notice.html_safe %>");
+  $("#newVideo").modal('hide');
+<% else %>
+  $("#newVideo").html("<%= escape_javascript(render 'videos/new') %>")
+<% end %>

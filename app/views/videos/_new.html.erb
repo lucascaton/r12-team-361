@@ -1,5 +1,5 @@
-<%= simple_form_for(@video, :url => videos_path) do |f| %>
-<div class="modal fade" id="newVideo">
+<%= simple_form_for(@video, url: videos_path, remote: true) do |f| %>
+<div class="modal <%= hide_modal %>" id="newVideo">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     <h3>Create a new video</h3>

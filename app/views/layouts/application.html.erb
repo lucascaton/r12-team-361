@@ -27,6 +27,9 @@
         <%= @user.display_information %>
       </ul>
     </div>
+    <div class="notice fade">
+      <div class="alert alert-success"><%= notice %></div>
+    </div>
     <div class="logo span7">
       <%= link_to(image_tag("logo.png"), root_path, :class => "pull-right") %>
     </div>
