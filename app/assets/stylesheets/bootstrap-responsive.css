@@ -411,17 +411,18 @@
 
 @media (max-width: 400px) {
   .navbar.navbar-inverse.navbar-fixed-top {
-    top: 0;
+    top: 40px;
     position: absolute;
   }
 
   .menu-top {
-    margin-top: 3px;
+    margin-top: 0;
   }
 
   .logo img{
     min-width: 314px!important;
     margin-left: -200px!important;
+    margin-top: 10px;
   }
 
   input[type=search] {
