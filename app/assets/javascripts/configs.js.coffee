@@ -6,7 +6,6 @@ window.babyCasts.main =
     obj.clickToShowVideo()
     obj.hoverToShare()
     obj.clickToCloseVideo()
-    obj.limitChar();
     obj.limitChar(".videoTitle", "35");
     obj.limitChar(".videoDescription", "140");
 
