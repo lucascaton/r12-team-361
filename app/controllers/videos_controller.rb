@@ -14,7 +14,7 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.find params[:id]
+    @video = VideoPresenter.new(Video.find params[:id])
   end
 
   def create
