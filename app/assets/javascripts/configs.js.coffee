@@ -48,13 +48,14 @@ window.babyCasts.main =
 
   clickToShowVideo: ->
     $(".link-to-play").click ->
-      videoId = $(@).parent().data("video_id")
+      videoId = $(@).parent().data("video_id").slice(0, -2)
+      currentId = $(@).parent().data("video_id")
       $(".link-to-play").hide();
       $(@).parent().find(".close-video").show()
       $(@).parent().animate({
         height: '630px'
       }, 500, ->
-        $("##{videoId}").html(
+        $("##{currentId}").html(
           "<iframe class='iframe' width='845' height='450' src='http://www.youtube.com/embed/#{videoId}?autoplay=1' frameborder='0' allowfullscreen></iframe>"
         )
       )
