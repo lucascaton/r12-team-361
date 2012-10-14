@@ -25,6 +25,14 @@ class UserPresenter < Presenter
     link_to(%{<i class="icon-white icon-off"></i> Logout}.html_safe, destroy_user_session_path, method: :delete)
   end
 
+  def upload_button_class
+    unless user_signed_in?
+      "btn btn-upload disabled"
+    else
+      "btn btn-upload"
+    end
+  end
+
   protected
 
   def user_signed_in?

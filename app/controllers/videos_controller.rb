@@ -1,7 +1,15 @@
 class VideosController < ApplicationController
+  before_filter :assign_user, only: [:index, :results]
+
   def index
-    @user   = UserPresenter.new(current_user)
-    @videos = VideoPresenter.collect(Video.all)
+    @video_search = Babycasts::VideoSearch.new
+    @videos       = VideoPresenter.collect(Video.all)
+  end
+
+  def results
+    @video_search = Babycasts::VideoSearch.new(params[:babycasts_video_search])
+    @videos       = VideoPresenter.collect(@video_search.results)
+    render :index
   end
 
   def show
@@ -42,5 +50,11 @@ class VideosController < ApplicationController
     @video = Video.find params[:id]
     @video.destroy
     redirect_to videos_path
+  end
+
+  protected
+
+  def assign_user
+    @user = UserPresenter.new(current_user)
   end
 end

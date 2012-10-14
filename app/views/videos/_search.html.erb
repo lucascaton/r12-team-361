@@ -1,7 +1,16 @@
-<form>
-  <div class="input-append">
-    <input class="span8" id="appendedInputButtons" placeholder="Buscar" size="16" type="search">
-    <button class="btn" type="button">Search</button>
-    <button data-toggle="modal" data-target="#newVideo" class="btn btn-upload <%= 'disabled' unless user_signed_in? %>" rel="tooltip" data-placement="top" data-original-title="You must be logged in order to upload." type="button">Upload</button>
-  </div>
-</form>
+<%= simple_form_for(@video_search, url: results_videos_path) do |f| %>
+  <%= f.input :expected_search, autofocus: true, label: false, placeholder: "Search", input_html: { class: "span8", size: "16", type: "search" } %>
+
+  <%= f.submit "Search", class: "btn" %>
+
+  <%= button_tag(
+      type: 'button',
+      class: @user.upload_button_class,
+      :'data-toggle' => "modal",
+      :'data-target' => "#newVideo",
+      rel: "tooltip",
+      :'data-placement' => "top",
+      :'data-original-title' => "You must be logged in order to upload.") do %>
+    Upload
+  <% end %>
+<% end %>
