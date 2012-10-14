@@ -23,7 +23,7 @@ module Babycasts
       end
 
       context "when the user type the title to search" do
-        %w(Preparing To Bring Baby Home).each do |title|
+        %w(Preparing To Bring Baby Home preparing to bring baby home).each do |title|
           it "should return the video that contains that title '#{title}'" do
             video        = FactoryGirl.create(:video, title: "Preparing To Bring Baby Home")
             second_video = FactoryGirl.create(:video, title: "Nice diaper")
