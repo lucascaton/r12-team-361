@@ -1,16 +1,22 @@
-<%= simple_form_for(@video_search, url: results_videos_path, wrapper: :default) do |f| %>
-  <%= f.input :expected_search, autofocus: true, label: false, placeholder: "Search", input_html: { class: "span8", size: "16", type: "search" } %>
+<div class="input-append">
+  <%= simple_form_for(@video_search, url: results_videos_path, wrapper: :default) do |f| %>
+    <%= f.input :expected_search, autofocus: true, label: false, placeholder: "Search", input_html: {id: "appendedInputButton", class: "span8", size: "16", type: "search"} %>
 
-  <%= f.submit "Search", class: "btn" %>
+    <%= button_tag(
+        type: 'submit',
+        class: 'btn') do %>
+      Search
+    <% end %>
 
-  <%= button_tag(
-      type: 'button',
-      class: @user.upload_button_class,
-      :'data-toggle' => "modal",
-      :'data-target' => "#newVideo",
-      rel: "tooltip",
-      :'data-placement' => "top",
-      :'data-original-title' => "You must be logged in order to upload.") do %>
-    Upload
+    <%= button_tag(
+        type: 'button',
+        class: @user.upload_button_class,
+        :'data-toggle' => "modal",
+        :'data-target' => "#newVideo",
+        rel: "tooltip",
+        :'data-placement' => "top",
+        :'data-original-title' => "You must be logged in order to upload.") do %>
+      Upload
+    <% end %>
   <% end %>
-<% end %>
+</div>
