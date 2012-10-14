@@ -49,6 +49,11 @@ body {
           color: #fff;
           font-weight: normal;
           display: block;
+          width: 130px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow:hidden;
+
         }
         &:hover{
           padding: 8px 10px 5px 10px;
