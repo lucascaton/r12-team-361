@@ -3,7 +3,3 @@
 http://babycasts.r12.railsrumble.com/
 
 http://railsrumble.com/
-
-== TODO list
-
-Share feature (facebook and twitter)
