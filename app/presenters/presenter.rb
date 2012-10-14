@@ -3,7 +3,7 @@ require 'active_support/core_ext/object'
 
 class Presenter < SimpleDelegator
   include Rails.application.routes.url_helpers
-  delegate :render, :image_tag, :link_to, to: :helpers
+  delegate :render, :image_tag, :link_to, :content_tag, to: :helpers
 
   # This method will return a presenter for each item of collection.
   #
