@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-                  :provider, :facebook_uid
+                  :provider, :facebook_uid, :facebook_token, :first_name, :last_name
 
   has_many :votes
   has_many :videos
