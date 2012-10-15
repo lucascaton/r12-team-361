@@ -4,12 +4,14 @@ class VideosController < ApplicationController
   before_filter :load_sponsored_video, only: [:index, :results]
 
   def index
-    @videos = VideoPresenter.collect(Video.available)
+    @pages = Video.available.page(params[:page]).per(4)
+    @videos = VideoPresenter.collect(@pages)
   end
 
   def results
     @video_search = Babycasts::VideoSearch.new(params[:babycasts_video_search])
-    @videos       = VideoPresenter.collect(@video_search.results)
+    @pages        = @video_search.results.page(params[:page]).per(4)
+    @videos       = VideoPresenter.collect(@pages)
     render :index
   end
 

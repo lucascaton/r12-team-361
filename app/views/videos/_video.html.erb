@@ -13,9 +13,9 @@
     </p>
       <div class="share">
         <strong>Share</strong><br />
-        <%= link_to(image_tag('http://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/24/facebook.png'), "http://www.facebook.com/sharer.php?u=#{request.url}show/#{video.id}&t=#{video.title}")%>
-        <%= link_to(image_tag('http://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/24/twitter.png'), "http://twitter.com/share?url=#{request.url}show/#{video.id}&text=#{video.title}")%>
-        <%= link_to(image_tag('http://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/24/google.png'), "http://plus.google.com/share?url=#{request.url}show/#{video.id}")%>
+        <%= link_to(image_tag('http://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/24/facebook.png'), "http://www.facebook.com/sharer.php?u=#{request.url}videos/#{video.id}&t=#{video.title}")%>
+        <%= link_to(image_tag('http://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/24/twitter.png'), "http://twitter.com/share?url=#{request.url}videos/#{video.id}&text=#{video.title}")%>
+        <%= link_to(image_tag('http://cdn1.iconfinder.com/data/icons/WPZOOM_Social_Networking_Icon_Set/24/google.png'), "http://plus.google.com/share?url=#{request.url}videos/#{video.id}")%>
       </div>
     <%= video.sponsored_mark %>
   </div>

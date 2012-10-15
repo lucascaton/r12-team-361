@@ -4,3 +4,7 @@
 <% if user_signed_in? %>
   <%= render "videos/new" %>
 <% end %>
+
+<div class="pagination">
+	<%= paginate @pages, :window => 2 %>
+</div>
